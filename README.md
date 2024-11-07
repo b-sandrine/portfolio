@@ -1,2 +1,3 @@
 # portfolio
-My portfolio made in html, css and php
+I am creating my portfolio in Next JS and Tailwind css
+
