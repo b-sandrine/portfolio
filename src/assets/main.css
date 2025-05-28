@@ -1,0 +1,159 @@
+@import './base.css';
+@import 'primeicons/primeicons.css';
+
+#app {
+  max-width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+header {
+  z-index: 100;
+  background-color: #FAFAFA;
+}
+
+/* section {
+  height: 100vh;
+} */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.home-container {
+  background: linear-gradient(110deg, #FAFAFA 50%, #F97316 50%);
+  height: 88vh;
+}
+
+/* Styling headings and anchor*/
+
+a {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 8px 0 8px 0;
+}
+
+h5 {
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* The button class  */
+.button {
+    border: 1px solid #25282B;
+    margin: 20px 0;
+    background-color: transparent;
+    border-radius: 30px;
+    text-align: center;
+    padding: 8px 12px;
+    font-weight: 600;
+    transition: background-color 1s ease-in-out, transform 2s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #F9FAFF;
+    background-color: #F97316;
+    border: none;
+    transform: scale(1.05);
+}
+
+.mb-2 {
+  margin-bottom: 10px;
+}
+
+.mb-4 {
+  margin-bottom: 15px;
+}
+
+.mb-6 {
+  margin-bottom: 20px;
+}
+
+.mt-6 {
+  margin-top: 20px;
+}
+
+i {
+  font-size: 20px;
+}
+
+@media (min-width: 1290px) {
+  .container {
+    padding: 4rem;
+    font-size: 1.25rem;
+  }
+
+  .container h3 {
+    font-size: 3.5rem;
+  }
+  .container h5 {
+    font-size: 2.5rem;
+  }
+
+  .container h6 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 2rem;
+  }
+
+  .mb-6 {
+    margin-bottom: 4rem;
+  }
+
+  .mt-6 {
+    margin-top: 2rem;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+/* For screens wider than 1600px */
+@media (max-width: 968px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .flex {
+    align-items: center;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: red;
+  }
+}
