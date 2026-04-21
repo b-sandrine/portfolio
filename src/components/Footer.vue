@@ -2,22 +2,31 @@
     <div class="container">
         <div class="text-center md:text-left flex h-[20vh] border-b-1 border-b-[#F97316]">
             <h3 class="text-3xl font-bold mb-4">Lets Connect here</h3>
-            <a href="#"
+            <a href="mailto:sanrdushimimana@gmail.com"
                 class="mt-4 inline-block bg-[#F97316] text-white px-6 py-2 rounded-full hover:bg-orange-500">Hire me
                 ➤</a>
         </div>
-
+    
         <div class="mx-auto grid sm:grid sm:grid-cols-1 md:grid-cols-4 gap-4 mt-6 py-8">
             <!-- Left Section -->
             <div class="text-center md:text-left">
                 <img src="@/assets/images/logo.png" class="rounded-xl mb-6 mt-6 h-40" alt="Logo">
-                <p>Hey, thanks for checking out my profile. I would greatly appreciate hearing from! Here are my social medias:</p>
-                <div class="icon flex w-[150px] lg:w-[60%] py-6">
-                    <i class="pi pi-instagram"></i>
-                    <i class="pi pi-github"></i>
-                    <i class="pi pi-linkedin"></i>
-                    <i class="pi pi-envelope"></i>
-                    <i class="pi pi-reddit"></i>
+                <p>Hey, thanks for checking out my profile. I would greatly appreciate hearing from!</p>
+                <p>I am almost on every social media platform. You can find me on:</p>
+                <div class="flex lg:w-[60%] w-[100%] py-6">
+                    <a href="https://www.instagram.com/d_bs02/" target="_blank" rel="noopener noreferrer">
+                        <i class="pi pi-instagram"></i>
+                    </a>
+                    <a href="https://github.com/b-sandrine" target="_blank" rel="noopener noreferrer">
+                        <i class="pi pi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dushimimana-sandrine-219b891b9/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="pi pi-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/sanrdushimimana" target="_blank" rel="noopener noreferrer">
+                        <i class="pi pi-twitter"></i>
+                    </a>
                 </div>
             </div>
 
@@ -58,18 +67,18 @@
 </template>
 
 <style scoped>
-
 @media (max-width: 768px) {
     .container {
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
-    margin: 0;
-}
-.input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        margin: 0 auto;
+        padding: 20px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 </style>

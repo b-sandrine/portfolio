@@ -27,7 +27,9 @@ import TitleComponent from '@/components/TitleComponent.vue';
           <p class="inline">Love playing volley ball(clearly), reading books, blogging, storytelling, trying foods, and
             travelling</p>
         </div>
-        <button class="button">Download My Resume</button>
+        <a href="https://drive.google.com/file/d/1c5WqYl4pvbcvP5AB_1Ol2KVED0WpBQht/view" target="_blank">
+          <button class="button">View My Resume</button>
+        </a>
       </div>
     </div>
   </div>

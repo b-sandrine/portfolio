@@ -5,16 +5,17 @@ import TitleComponent from '@/components/TitleComponent.vue'
 <template>
   <div class="container">
     <TitleComponent title="Get In Touch" />
-    <div class="flex bg-[#F9FAFF] rounded-3xl shadow-xsm contact-container p-16">
-      <div class="contact-description py-8">
+    <div class="contact-flex shadow-xsm">
+      <div class="w-[40%]">
         <h3>Have an Awesome Idea?</h3>
         <p class="mt-4 text-lg md:text-xl opacity-90">I'm excited to connect! Reach out for collaborations, inquiries,
           or just to say hi.</p>
       </div>
-      <div class="form w-[80%]">
-        <div class="mr-0 px-4 sm:px-6 lg:px-8 float-right ">
-          <div
-            class=" max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-2xl">
+      <div class="w-[50%]">
+        <!-- <div class="mr-0 px-4 sm:px-6 lg:px-8 float-right "> -->
+          <div class="w-full float-right">
+          <!-- <div class=" max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-2xl"> -->
+            <div class=" max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-2xl">
             <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Send Me a Message</h2>
             <div >
               <div class="mb-4">
@@ -47,6 +48,14 @@ import TitleComponent from '@/components/TitleComponent.vue'
 </template>
 
 <style scoped>
+
+.contact-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
 label {
   margin-bottom: 5px;
 }

@@ -28,8 +28,10 @@ header {
 }
 
 .home-container {
-  background: linear-gradient(110deg, #FAFAFA 50%, #F97316 50%);
-  height: 88vh;
+  /* background: linear-gradient(110deg, #FAFAFA 50%, #F97316 50%); */
+  /* background-color: #F97316; */
+  background-color: #FAFAFA;
+  height: 70vh;
 }
 
 /* Styling headings and anchor*/
@@ -39,13 +41,13 @@ a {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 900;
   margin: 8px 0 8px 0;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 5px 0 5px 0;
   font-weight: 700;
 }
@@ -57,8 +59,12 @@ h6 {
 }
 
 p {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
+}
+
+.icon {
+  margin: 10px auto;
 }
 
 /* The button class  */
@@ -101,7 +107,7 @@ i {
   font-size: 20px;
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 1536px) {
   .container {
     padding: 4rem;
     font-size: 1.25rem;
