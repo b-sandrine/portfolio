@@ -9,7 +9,8 @@
 
 header {
   z-index: 100;
-  background-color: #FAFAFA;
+  background-color: var(--color-bg);
+  transition: background-color 0.2s;
 }
 
 /* section {
@@ -28,10 +29,10 @@ header {
 }
 
 .home-container {
-  /* background: linear-gradient(110deg, #FAFAFA 50%, #F97316 50%); */
-  /* background-color: #F97316; */
-  background-color: #FAFAFA;
+  /* background: linear-gradient(110deg, var(--color-bg) 50%, var(--color-primary) 50%); */
+  background-color: var(--color-bg);
   height: 70vh;
+  transition: background-color 0.2s;
 }
 
 /* Styling headings and anchor*/
@@ -44,23 +45,47 @@ h3 {
   font-size: 22px;
   font-weight: 900;
   margin: 8px 0 8px 0;
+  transition: color 0.2s;
+  color: var(--color-text);
 }
 
 h5 {
   font-size: 20px;
   margin: 5px 0 5px 0;
   font-weight: 700;
+  transition: color 0.2s;
+  color: var(--color-text);
 }
 
 h6 {
   font-size: 18px;
   margin: 5px 0 5px 0;
   font-weight: 600;
+  transition: color 0.2s;
+  color: var(--color-text);
 }
 
 p {
   font-size: 16px;
   font-weight: 400;
+  transition: color 0.2s;
+  color: var(--color-text-secondary-active);
+}
+
+.dark h3 {
+  color: var(--color-text);
+}
+
+.dark h5 {
+  color: var(--color-text);
+}
+
+.dark h6 {
+  color: var(--color-text);
+}
+
+.dark p {
+  color: var(--color-text-secondary-active);
 }
 
 .icon {
@@ -69,22 +94,31 @@ p {
 
 /* The button class  */
 .button {
-    border: 1px solid #25282B;
-    margin: 20px 0;
-    background-color: transparent;
-    border-radius: 30px;
-    text-align: center;
-    padding: 8px 12px;
-    font-weight: 600;
-    transition: background-color 1s ease-in-out, transform 2s ease-in-out;
-    cursor: pointer;
+  border: 1px solid var(--color-text-secondary-active);
+  margin: 20px 0;
+  background-color: transparent;
+  border-radius: 30px;
+  text-align: center;
+  padding: 8px 12px;
+  font-weight: 600;
+  transition:
+    background-color 1s ease-in-out,
+    transform 2s ease-in-out,
+    color 0.2s;
+  cursor: pointer;
+  color: var(--color-text-secondary-active);
+}
+
+.dark .button {
+  border-color: var(--color-text-secondary-active);
+  color: var(--color-text-secondary-active);
 }
 
 .button:hover {
-    color: #F9FAFF;
-    background-color: #F97316;
-    border: none;
-    transform: scale(1.05);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  transform: scale(1.05);
 }
 
 .mb-2 {

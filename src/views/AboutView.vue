@@ -9,9 +9,10 @@ import TitleComponent from '@/components/TitleComponent.vue';
       <div class="image col-span-12 md:col-span-4">
         <img src="@/assets/images/profile/02.png" class="h-[80%]" alt="My picture">
       </div>
-      <div class="about-details col-span-12 md:col-span-7"> 
+      <div class="about-details col-span-12 md:col-span-7">
         <h3>Software Engineer</h3>
-        <p>Hey you 😃 Nice to Meet You<br /> Thanks for checking out my portfolio. I hope you will enjoy your time here</p>
+        <p>Hey you 😃 Nice to Meet You<br /> Thanks for checking out my portfolio. I hope you will enjoy your time here
+        </p>
         <div class="">
           <h6 class="inline-block mr-4">A little bit about me: </h6>
           <p class="inline ml-4">I am a talented, and proactive software developer with 3+ years of experience creating
@@ -50,7 +51,7 @@ p {
 }
 
 .button {
-  border: 1px solid #25282B;
+  border: 1px solid var(--color-text-secondary-active);
   margin: 10px 0;
   background-color: transparent;
   border-radius: 30px;
@@ -62,8 +63,8 @@ p {
 }
 
 .button:hover {
-  color: #F9FAFF;
-  background-color: #F97316;
+  color: var(--color-white);
+  background-color: var(--color-primary);
   border: none;
   transform: scale(1.05);
 }
@@ -77,6 +78,7 @@ p {
   .about-details h3 {
     display: none;
   }
+
   .image {
     text-align: center;
   }

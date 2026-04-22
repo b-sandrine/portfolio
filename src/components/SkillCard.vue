@@ -1,11 +1,10 @@
-
 <template>
     <div class="container skill-container shadow-sm rounded-[8px]">
         <div class="project-view w-full">
             <img :src="item.skillImage" class="h-auto" alt="Project preview">
             <!-- <img :src="item.skillImage" class="h-30" alt="Project preview"> -->
         </div>
-        <div class="project-description w-full text-center">
+        <div class="project-description w-full p-4">
             <h5>{{ item.skillName }}</h5>
             <p class="px-2 pb-4">{{ item.skillDescription }}</p>
         </div>
@@ -17,8 +16,9 @@ img {
     border-radius: 8px;
     margin: 10px auto 0;
 }
+
 .skill-container {
-    margin-bottom: 20px;
+    margin-bottom: 0;
     width: 100%;
 }
 

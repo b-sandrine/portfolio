@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .project-container {
-    background-color: #F9FAFF;
+    background-color: var(--color-bg-secondary-active);
     border-radius: 24px;
     height: auto;
     margin: 20px auto 10px;

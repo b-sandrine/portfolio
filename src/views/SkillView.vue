@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TitleComponent from '@/components/TitleComponent.vue';
 import SkillCard from '@/components/SkillCard.vue';
+
 const skills = [
     {
         skillName: "Frontend Development",
@@ -36,11 +37,122 @@ const skills = [
 </script>
 
 <template>
-    <div class="container">
-        <TitleComponent title="My Services" />
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <SkillCard v-for="(skills, index) in skills" :key="index" :item="skills"/>
+    <div class="skills-container">
+        <div class="container">
+            <TitleComponent title="My Services" class="title-section" />
+            <div class="skills-grid fade-in-up">
+                <div v-for="(skill, index) in skills" :key="index" class="skill-card-wrapper"
+                    :style="{ '--stagger-delay': `${index * 0.1}s` }">
+                    <SkillCard :item="skill" class="skill-card" />
+                </div>
+            </div>
         </div>
-
     </div>
 </template>
+
+<style scoped>
+.skills-container {
+    background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-secondary-active) 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.skills-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--color-primary), transparent);
+    opacity: 0.08;
+    border-radius: 50%;
+}
+
+.skills-container::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--color-primary), transparent);
+    opacity: 0.08;
+    border-radius: 50%;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+:deep(.title-section) {
+    margin-bottom: 40px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-card-wrapper {
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: var(--stagger-delay);
+}
+
+.skill-card {
+    height: 100%;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        margin: 30px 0;
+        padding: 30px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+</style>

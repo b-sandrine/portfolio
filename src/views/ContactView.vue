@@ -61,9 +61,18 @@ label {
 }
 
 @media (max-width: 768px) {
-  .contact-container {
+  .contact-flex {
     flex-direction: column;
-    padding: 20px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .contact-flex div {
+     width: 100%;
+     margin-bottom: 20px;
+  }
+  .contact-flex div:first-child {
+    text-align: center;
   }
 
   .contact-description {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useDarkMode } from '@/composables/useDarkMode'
 import Navbar from '@/components/Navbar.vue'
 
 //pages
@@ -10,7 +11,16 @@ import ContactView from './views/ContactView.vue'
 import HireMeView from './views/HireMeView.vue'
 import Footer from './components/Footer.vue'
 
+import FooterEnhanced from './components/Footer-Enhanced.vue'
+import HireMeViewEnhanced from './views/HireMeView-Enhanced.vue'
+import ProjectViewEnhanced from './views/ProjectView-Enhanced.vue'
+import SkillViewEnhanced from './views/SkillView-Enhanced.vue'
+
+
 import '@/assets/tailwind.css'
+
+// Initialize dark mode
+useDarkMode()
 </script>
 
 <template>
@@ -28,7 +38,7 @@ import '@/assets/tailwind.css'
       <AboutView />
     </section>
     <section id="skills" class="">
-      <SkillView />
+      <SkillViewEnhanced />
     </section>
     <section id="hire-me" class="">
       <HireMeView />
@@ -43,7 +53,7 @@ import '@/assets/tailwind.css'
 
    <!-- <footer class="py-8 px-4 sm:px-6 lg:px-8"> -->
     <footer class="bg-gray-900 rounded-tr-xl rounded-tl-xl text-white mt-6 py-4">
-      <Footer />
+      <FooterEnhanced />
     </footer>  
    <!-- </footer> -->
 </template>

@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
+import { useDarkMode } from '@/composables/useDarkMode'
+
+// Dark mode
+const { isDark, toggleDarkMode } = useDarkMode()
 
 // Reactive state for toggling the mobile menu
-const isMenuOpen = ref(false);
+const isMenuOpen = ref(false)
 
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
+  isMenuOpen.value = !isMenuOpen.value
+}
 </script>
 
 <template>
@@ -28,6 +32,12 @@ const toggleMenu = () => {
         <a href="#about" class="link hover">About Me</a>
         <a href="#skills" class="link hover">Services</a>
         <a href="#projects" class="link hover">Projects</a>
+        <!-- Button for toggling dark mode -->
+        
+        <button class="dark-mode-toggle" @click="toggleDarkMode" title="Toggle dark mode">
+          <i :class="isDark ? 'fas fa-sun' : 'fas fa-moon'"></i>
+        </button>
+       
         <button class="contact-button">
           <a href="#contact">Contact Me</a>
         </button>
@@ -47,12 +57,15 @@ const toggleMenu = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem; /* h-15 equivalent */
-  padding: 2rem 0; /* py-8 equivalent */
+  height: 5rem;
+  /* h-15 equivalent */
+  padding: 2rem 0;
+  /* py-8 equivalent */
 }
 
 .logo-image {
-  height: 5rem; /* h-20 equivalent */
+  height: 5rem;
+  /* h-20 equivalent */
 }
 
 .links {
@@ -64,30 +77,61 @@ const toggleMenu = () => {
 
 .link {
   font-weight: bold;
-  font-size: 1rem; /* text-base equivalent */
+  font-size: 1rem;
+  /* text-base equivalent */
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   transition: color 0.2s;
 }
 
+:global(.dark) .link {
+  color: var(--color-text);
+}
+
 .link.hover:hover {
-  color: #f97316; /* hover:text-[#F97316] */
+  color: var(--color-primary);
+  /* hover:text-[#F97316] */
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+:global(.dark) .dark-mode-toggle {
+  color: var(--color-text);
+}
+
+.dark-mode-toggle:hover {
+  color: var(--color-primary);
 }
 
 .contact-button {
-  padding: 0.5rem 1rem; /* px-2 py-1 */
-  font-size: 0.875rem; /* text-[14px] */
-  color: #f97316;
-  border: 1px solid #f97316; /* border-1 border-[#F97316] */
-  border-radius: 1.875rem; /* rounded-[30px] */
+  padding: 0.5rem 1rem;
+  /* px-2 py-1 */
+  font-size: 0.875rem;
+  /* text-[14px] */
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  /* border-1 border-[#F97316] */
+  border-radius: 1.875rem;
+  /* rounded-[30px] */
   background: transparent;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .contact-button:hover {
-  background-color: #f97316;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .contact-button a {
@@ -110,8 +154,12 @@ const toggleMenu = () => {
 .hamburger span {
   width: 100%;
   height: 0.25rem;
-  background-color: #000;
+  background-color: var(--color-text);
   transition: all 0.3s ease;
+}
+
+:global(.dark) .hamburger span {
+  background-color: var(--color-text);
 }
 
 .hamburger.open span:nth-child(1) {
@@ -135,11 +183,15 @@ const toggleMenu = () => {
     top: 5rem;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: var(--color-bg);
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.dark) .links {
+    background-color: var(--color-bg);
   }
 
   .links.menu-open {
