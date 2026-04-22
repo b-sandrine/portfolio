@@ -64,7 +64,7 @@
       <div class="image-section fade-in-right">
         <div class="profile-image-wrapper">
           <div class="profile-frame">
-            <img src="@/assets/images/profile/profile.jpg" alt="Sandrine DUSHIMIMANA" class="profile-image" />
+            <img src="@/assets/images/profile/profile.JPG" alt="Sandrine DUSHIMIMANA" class="profile-image" />
           </div>
           <div class="floating-element element-1"></div>
           <div class="floating-element element-2"></div>
